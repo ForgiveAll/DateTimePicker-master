@@ -1,4 +1,4 @@
-package com.lany.picker;
+package com.forgive.picker;
 
 import android.content.Context;
 import android.content.res.ColorStateList;
@@ -90,7 +90,7 @@ public class NumberPicker extends LinearLayout {
     /**
      * The default unscaled distance between the selection dividers.
      */
-    private static final int UNSCALED_DEFAULT_SELECTION_DIVIDERS_DISTANCE = 48;
+    private static final int UNSCALED_DEFAULT_SELECTION_DIVIDERS_DISTANCE = 25;
 
     /**
      * The resource id for the default layout.
@@ -479,7 +479,7 @@ public class NumberPicker extends LinearLayout {
          *                    {@link #SCROLL_STATE_TOUCH_SCROLL} or
          *                    {@link #SCROLL_STATE_IDLE}.
          */
-         void onScrollStateChange(NumberPicker view, int scrollState);
+        void onScrollStateChange(NumberPicker view, int scrollState);
     }
 
     /**
@@ -652,7 +652,6 @@ public class NumberPicker extends LinearLayout {
             }
         });
         mInputText.setFilters(new InputFilter[]{new InputTextFilter()});
-
         mInputText.setRawInputType(InputType.TYPE_CLASS_NUMBER);
         mInputText.setImeOptions(EditorInfo.IME_ACTION_DONE);
 
@@ -745,8 +744,10 @@ public class NumberPicker extends LinearLayout {
         // min.
         final int widthSize = resolveSizeAndStateRespectingMinSize(mMinWidth,
                 getMeasuredWidth(), widthMeasureSpec);
+        // TODO
         final int heightSize = resolveSizeAndStateRespectingMinSize(mMinHeight,
                 getMeasuredHeight(), heightMeasureSpec);
+//        final int heightSize = UNSCALED_DEFAULT_SELECTION_DIVIDERS_DISTANCE * 10;
         setMeasuredDimension(widthSize, heightSize);
     }
 
@@ -1688,7 +1689,8 @@ public class NumberPicker extends LinearLayout {
         int totalTextHeight = selectorIndices.length * mTextSize;
         float totalTextGapHeight = (getBottom() - getTop()) - totalTextHeight;
         float textGapCount = selectorIndices.length;
-        mSelectorTextGapHeight = (int) (totalTextGapHeight / textGapCount + 0.5f);
+//        mSelectorTextGapHeight = (int) (totalTextGapHeight / textGapCount + 0.5f);
+        mSelectorTextGapHeight = UNSCALED_DEFAULT_SELECTION_DIVIDERS_DISTANCE;
         mSelectorElementHeight = mTextSize + mSelectorTextGapHeight;
         // Ensure that the middle item is positioned the same as the text in
         // mInputText
@@ -1847,7 +1849,7 @@ public class NumberPicker extends LinearLayout {
      */
     private boolean updateInputTextView() {
         /*
-		 * If we don't have displayed values then use the current number else
+         * If we don't have displayed values then use the current number else
 		 * find the correct value in the displayed values for the current
 		 * number.
 		 */

@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.lany.picker.samples">
+    package="com.forgive.picker.samples">
 
     <application
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".MainActivity"
+            android:name="com.forgive.picker.samples.MainActivity"
             android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -15,11 +15,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".DatePickerActivity"></activity>
-        <activity android:name=".TimePickerActivity"></activity>
-        <activity android:name=".LanyPickerActivity"></activity>
-        <activity android:name=".CalendarViewActivity"></activity>
-        <activity android:name=".YmdhPickerActivity"></activity>
+        <activity android:name="com.forgive.picker.samples.DatePickerActivity"></activity>
+        <activity android:name="com.forgive.picker.samples.TimePickerActivity"></activity>
+        <activity android:name="com.forgive.picker.samples.LanyPickerActivity"></activity>
+        <activity android:name="com.forgive.picker.samples.CalendarViewActivity"></activity>
+        <activity android:name="com.forgive.picker.samples.YmdhPickerActivity"></activity>
     </application>
 
 </manifest>

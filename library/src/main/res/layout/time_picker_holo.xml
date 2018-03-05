@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:layout_gravity="center_horizontal"
-    android:orientation="horizontal">
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_gravity="center_horizontal"
+              android:orientation="horizontal">
 
 
-    <!-- hour -->
+    <!-- hour  selectionDividersDistance-->
 
-    <com.lany.picker.NumberPicker
+    <com.forgive.picker.NumberPicker
         android:id="@+id/hour"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -27,7 +28,7 @@
 
     <!-- minute -->
 
-    <com.lany.picker.NumberPicker
+    <com.forgive.picker.NumberPicker
         android:id="@+id/minute"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -37,7 +38,7 @@
 
     <!-- AM / PM -->
 
-    <com.lany.picker.NumberPicker
+    <com.forgive.picker.NumberPicker
         android:id="@+id/amPm"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

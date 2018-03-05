@@ -1,4 +1,4 @@
-package com.lany.picker;
+package com.forgive.picker;
 
 import android.content.Context;
 import android.content.res.Configuration;
@@ -86,6 +86,22 @@ public class HMPicker extends FrameLayout {
     public HMPicker(Context context, AttributeSet attrs) {
         this(context, attrs, R.attr.timePickerStyle);
     }
+
+    public void setEditTextClickable(boolean isClickable) {
+        if (mHourSpinnerInput != null) {
+            mHourSpinnerInput.setEnabled(false);
+            mHourSpinnerInput.setFocusable(false);
+        }
+        if (mMinuteSpinnerInput != null) {
+            mMinuteSpinnerInput.setEnabled(isClickable);
+            mMinuteSpinnerInput.setFocusable(false);
+        }
+        if (mAmPmSpinnerInput != null) {
+            mAmPmSpinnerInput.setEnabled(isClickable);
+            mAmPmSpinnerInput.setFocusable(false);
+        }
+    }
+
 
     public HMPicker(Context context, AttributeSet attrs, int defStyle) {
         super(context, attrs, defStyle);
@@ -211,8 +227,7 @@ public class HMPicker extends FrameLayout {
         updateHourControl();
         updateAmPmControl();
 
-        setOnTimeChangedListener(new OnTimeChangedListener(){
-
+        setOnTimeChangedListener(new OnTimeChangedListener() {
             @Override
             public void onTimeChanged(HMPicker view, int hourOfDay, int minute) {
 
@@ -248,6 +263,7 @@ public class HMPicker extends FrameLayout {
         mMinuteSpinner.setSelectionDividerHeight(selectionDividerHeight);
         mAmPmSpinner.setSelectionDividerHeight(selectionDividerHeight);
     }
+
 
     @Override
     public void setEnabled(boolean enabled) {

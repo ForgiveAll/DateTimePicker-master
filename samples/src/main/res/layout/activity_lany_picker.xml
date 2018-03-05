@@ -11,7 +11,7 @@
         android:layout_height="wrap_content"
         android:text="Launch dialog" />
 
-    <com.lany.picker.HMSPicker
+    <com.forgive.picker.HMSPicker
         android:id="@+id/lanyPicker"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />

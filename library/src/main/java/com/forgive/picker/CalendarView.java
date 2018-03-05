@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.lany.picker;
+package com.forgive.picker;
 
 import android.app.Service;
 import android.content.Context;

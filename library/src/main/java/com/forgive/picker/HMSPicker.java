@@ -1,4 +1,4 @@
-package com.lany.picker;
+package com.forgive.picker;
 
 import android.content.Context;
 import android.content.res.Configuration;

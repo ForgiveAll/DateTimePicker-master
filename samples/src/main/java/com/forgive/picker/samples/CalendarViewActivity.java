@@ -1,10 +1,10 @@
-package com.lany.picker.samples;
+package com.forgive.picker.samples;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
 
-import com.lany.picker.CalendarView;
+import com.forgive.picker.CalendarView;
 
 public class CalendarViewActivity extends AppCompatActivity {
 

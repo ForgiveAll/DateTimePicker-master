@@ -1,4 +1,4 @@
-package com.lany.picker.samples;
+package com.forgive.picker.samples;
 
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
@@ -6,7 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
 import android.widget.TextView;
 
-import com.lany.picker.YMDHPicker;
+import com.forgive.picker.YMDHPicker;
 
 public class YmdhPickerActivity extends AppCompatActivity {
     private TextView showText;

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
@@ -9,15 +10,23 @@
         android:id="@+id/show_dialog"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Launch dialog" />
+        android:text="Launch dialog"/>
 
-    <com.lany.picker.HMPicker
+    <com.forgive.picker.HMPicker
         android:id="@+id/timePicker"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"/>
 
-    <com.lany.picker.HMPicker
+    <com.forgive.picker.HMPicker
         android:id="@+id/timePicker1"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"/>
+
+    <com.forgive.picker.WheelView
+        android:id="@+id/date_wheelview"
+        android:layout_width="wrap_content"
+        android:layout_height="200dp"
+        android:layout_gravity="center_vertical"
+        android:overScrollMode="never"
+        ></com.forgive.picker.WheelView>
 </LinearLayout>

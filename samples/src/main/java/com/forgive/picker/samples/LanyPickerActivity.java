@@ -1,4 +1,4 @@
-package com.lany.picker.samples;
+package com.forgive.picker.samples;
 
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
@@ -7,8 +7,8 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
 
-import com.lany.picker.HMSPicker;
-import com.lany.picker.HMSPickerDialog;
+import com.forgive.picker.HMSPicker;
+import com.forgive.picker.HMSPickerDialog;
 
 import java.util.Calendar;
 

@@ -14,11 +14,10 @@
  * limitations under the License.
  */
 
-package com.lany.picker;
+package com.forgive.picker;
 
 import android.content.Context;
 import android.hardware.SensorManager;
-import android.util.FloatMath;
 import android.view.ViewConfiguration;
 import android.view.animation.AnimationUtils;
 import android.view.animation.Interpolator;

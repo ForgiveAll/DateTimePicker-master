@@ -1,4 +1,4 @@
-package com.lany.picker;
+package com.forgive.picker;
 
 import android.app.AlertDialog;
 import android.content.Context;
@@ -9,7 +9,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 
-import com.lany.picker.HMSPicker.OnTimeChangedListener;
+import com.forgive.picker.HMSPicker.OnTimeChangedListener;
 
 /**
  * hour/minute/second

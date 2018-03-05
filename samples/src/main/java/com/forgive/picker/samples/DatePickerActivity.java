@@ -1,4 +1,4 @@
-package com.lany.picker.samples;
+package com.forgive.picker.samples;
 
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
@@ -7,16 +7,24 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
 
-import com.lany.picker.DatePicker;
-import com.lany.picker.DatePickerDialog;
+import com.forgive.picker.DatePicker;
+import com.forgive.picker.DatePickerDialog;
 
 import java.util.Calendar;
+import java.util.Date;
 
 public class DatePickerActivity extends AppCompatActivity {
     private TextView mDateDisplay;
     private int mYear;
     private int mMonth;
     private int mDay;
+
+    public Date changeDate(Date d, int dateType, int num) {
+        Calendar c = Calendar.getInstance();
+        c.setTime(d);
+        c.add(dateType, num);
+        return c.getTime();
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,10 +33,16 @@ public class DatePickerActivity extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         DatePicker datePicker = (DatePicker) findViewById(R.id.aa_datePicker);
+
+        //        SimpleDateFormat s = new SimpleDateFormat("yyyy-MM-dd");
+        //        Date date = changeDate(new Date(), Calendar.DAY_OF_MONTH, +7);
+        long min = System.currentTimeMillis() - 1 * 60 * 1000;
+        long max = System.currentTimeMillis() + 10 * 24 * 60 * 60 * 1000;
+
+        datePicker.setMinDate(min);
+        datePicker.setMaxDate(max);
         datePicker.setSelectionDivider(new ColorDrawable(0xffff0000));
         datePicker.setSelectionDividerHeight(2);
-        datePicker.setCalendarViewShown(false);
-        //datePicker.setDayViewShown(false);
 
 
         findViewById(R.id.btnDialog).setOnClickListener(new View.OnClickListener() {

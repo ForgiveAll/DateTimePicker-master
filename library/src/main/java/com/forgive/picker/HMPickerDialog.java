@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.lany.picker;
+package com.forgive.picker;
 
 import android.app.AlertDialog;
 import android.content.Context;
@@ -25,7 +25,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 
-import com.lany.picker.HMPicker.OnTimeChangedListener;
+import com.forgive.picker.HMPicker.OnTimeChangedListener;
 
 /**
  * A dialog that prompts the user for the time of day using a {@link HMPicker}.
